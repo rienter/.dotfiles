@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+battery_capacity() {
+    cat /sys/class/power_supply/"$1"/capacity
+}
+
+battery_status() {
+    st="$(cat /sys/class/power_supply/$1/status)"
+    case $st in
+        "Charging") echo " ";;
+        "Discharging") echo " ";;
+        "*") echo " ";;
+    esac
+}
+
+datetime() {
+    date +"%a %d %b %y %H:%M"
+}
+
+while true;
+do
+    echo "$(battery_status BAT0)$(battery_capacity BAT0)% $(datetime)"
+    sleep 5
+done

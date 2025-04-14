@@ -102,11 +102,16 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 # Special key to take a screenshot with grim
 bindsym Print exec grim
 
+# Colors
+client.unfocused #000000 #000000 #ffffff #000000 #000000
+client.focused #333333 #333333 #ffffff #333333 #333333
+
 # Status bar
 bar {
     position bottom
+    font CommitMono Nerd Font 12
 
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command ~/.bin/status
 
     colors {
         statusline #ffffff
