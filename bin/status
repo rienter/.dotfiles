@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+wifi() {
+    if [ "$(nmcli radio wifi)" = "enabled" ]; then
+        echo "  UP"
+    else
+        echo "  DOWN"
+    fi
+}
+
 battery_capacity() {
     cat /sys/class/power_supply/"$1"/capacity
 }
@@ -19,6 +27,6 @@ datetime() {
 
 while true;
 do
-    echo "$(battery_status BAT0)$(battery_capacity BAT0)% $(datetime)"
+    echo "$(wifi) $(battery_status BAT0)$(battery_capacity BAT0)% $(datetime)"
     sleep 5
 done

@@ -21,13 +21,17 @@ set $term foot
 # Dmenu
 set $menu wmenu-run
 # Wallpaper
-output * bg ~/.config/wallpapers/tiles/white-wave.png tile
+output * bg ~/.config/wallpapers/tiles/cartographer.png tile
 
 # Configuring touchpad
 input "type:touchpad" {
     natural_scroll enabled
     tap enabled
 }
+
+# Make mouse more usable on laptop
+focus_follows_mouse no
+mouse_warping container
 
 # Keybindings
 # Open terminal
@@ -102,7 +106,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 # Special key to take a screenshot with grim
 bindsym Print exec grim
 
-# Colors
+# Border style
 client.unfocused #000000 #000000 #ffffff #000000 #000000
 client.focused #333333 #333333 #ffffff #333333 #333333
 

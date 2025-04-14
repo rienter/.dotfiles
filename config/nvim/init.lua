@@ -24,3 +24,6 @@ vim.o.path = vim.o.path .. "**"
 -- vim-sensible
 vim.o.incsearch = true
 vim.o.hlsearch = true
+
+-- disable mouse
+vim.o.mouse = ""
