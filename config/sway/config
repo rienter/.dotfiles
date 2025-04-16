@@ -121,7 +121,7 @@ bar {
     colors {
         statusline #ffffff
         background #000000
-        inactive_workspace #000000 #000000 #333333
+        inactive_workspace #000000 #000000 #888888
         active_workspace #ffffff #000000 #ffffff
         focused_workspace #ffffff #000000 #ffffff
     }
