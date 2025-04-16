@@ -19,7 +19,7 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
 -- Use path to search files
-vim.o.path:append { "**" }
+vim.opt.path:append { "**" }
 
 -- Search
 vim.o.incsearch = true

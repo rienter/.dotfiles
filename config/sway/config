@@ -20,6 +20,7 @@ set $right l
 set $term foot
 # Dmenu
 set $menu wmenu-run
+
 # Wallpaper
 output * bg ~/.config/wallpapers/tiles/cartographer.png tile
 
