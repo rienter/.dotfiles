@@ -22,7 +22,7 @@ set $term foot
 set $menu wmenu-run
 
 # Wallpaper
-output * bg ~/.config/wallpapers/tiles/cartographer.png tile
+output * bg ~/.config/wallpapers/tiles/white-diamond.png tile
 
 # Configuring touchpad
 input "type:touchpad" {
