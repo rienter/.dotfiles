@@ -19,11 +19,15 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
 -- Use path to search files
-vim.o.path = vim.o.path .. "**"
+vim.o.path:append { "**" }
 
--- vim-sensible
+-- Search
 vim.o.incsearch = true
 vim.o.hlsearch = true
+vim.o.ignorecase = true
 
--- disable mouse
+-- Disable mouse
 vim.o.mouse = ""
+
+-- Load from external files
+require('statusline')
